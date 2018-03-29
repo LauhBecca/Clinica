@@ -1,3 +1,4 @@
+Ok - Revisado.
 http://www.scielo.br/scielo.php?pid=S0080-62342012000100025&script=sci_arttext
 
 http://www.scielo.br/scielo.php?pid=S1415-65552001000100007&script=sci_arttext&tlng=es
