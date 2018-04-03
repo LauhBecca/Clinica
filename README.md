@@ -5,6 +5,6 @@ http://www.scielo.br/scielo.php?pid=S1415-65552001000100007&script=sci_arttext&t
 
 http://www.scielo.br/pdf/rlae/v13n1/v13n1a12
 
-http://www.scielo.br/scielo.php?pid=S1415-65552001000100007&script=sci_arttext&tlng=es
+http://www.redalyc.org/html/1801/180115440016/
 
 https://www.scielosp.org/article/csp/1999.v15n3/647-654/pt/
