@@ -1,0 +1,13 @@
+/*em relacao a tabela endereco*/
+
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Conceicao', '13013-101', 'Centro', 286, Campinas, 'São Paulo');
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Alferes Domingos', '13015-031', 'Centro', 500, Campinas, 'São Paulo');
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Barata Ribeiro','13015-097', 'Centro', 59, Campinas, 'São Paulo');
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Clelia de Morais Antonio','13058-315', 'Jardim Santa Clara', 59, Campinas, 'São Paulo');
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Armando Amaral','13099-104', 'Carlos Gomes', 100, Campinas, 'São Paulo');
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Paula Bueno','13015-097', 'Taquaral', 596, Campinas, 'São Paulo');
+INSERT INTO tb_endereco (rua, cep, bairro, numero, cidade, estado) VALUES ('rua Sílvio Rizzardo','13060-854', 'Jardim Campos Elíseos', 1200, Campinas, 'São Paulo');
+
+
+
+ 
