@@ -1,0 +1,4 @@
+create table tb_consultorio(
+cod_cons int PRIMARY KEY IDENTITY (0,1),
+nome varchar(255)
+)
