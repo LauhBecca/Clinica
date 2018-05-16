@@ -5,8 +5,11 @@ crm int not null,
 telefone int,
 cpf varchar(11) not null,
 email varchar(255),
-plano_de_saude varchar (255)
+plano_de_saude varchar (255),
+sexo varchar (10) not null, 
+senha char(6) not null 
 )
+
 create table tb_especialidade(
 cod_esp int PRIMARY KEY IDENTITY (0,1),
 nome varchar(255) not null,
@@ -28,13 +31,18 @@ nome varchar(255)
 create table tb_paciente(
 cod_pac int PRIMARY KEY IDENTITY(0,1),
 nome varchar(255) not null,
-telefone int,
+telefone int not null,
 cpf varchar(11) not null,
-nascimento int,
+nascimento int not null,
 email varchar(255),
+sexo varchar (100),
 plano_de_saude varchar (255),
+senha char(6) not null,
 fk_cons int REFERENCES tb_consultorio (cod_cons)
 )
+
+
+
 
 create table tb_consulta(
 cod_consu int PRIMARY KEY IDENTITY (0,1),
@@ -46,7 +54,7 @@ fk_paci int REFERENCES tb_paciente (cod_pac),
 fk_medi int REFERENCES tb_medico (cod_med)
 )
 
-create table tb_endereço(
+create table tb_endereÃ§o(
 cod_end int PRIMARY KEY IDENTITY (0,1),
 rua varchar(255),
 cep varchar(8),
@@ -63,4 +71,3 @@ create table cons_med(
 fk_medi int REFERENCES tb_medico (cod_med),
 fk_cons int REFERENCES tb_consultorio(cod_cons)
 )
-
