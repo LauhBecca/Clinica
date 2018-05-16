@@ -1,0 +1,20 @@
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES ('Livia Mariana Luz', '1234','98331702','461.851.028-54','luzz.liviamariana@gmail.com','Unimed', 'Feminino', '070708');
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES (‘Matheus Leite Tavares', '5678','981629702','432.493.668-46','mleitetavares@gmail.com','Unimed', 'Masculino', '123456');
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES ('Bruna Dias Araujo’, '9101','984559870','456.879.900-78','bruninhaaruajo@gmail.com','Bradesco', 'Feminino', '989898');
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES ('Laureen Rebecca’', '1112', '98334455', ’879.098.124-80','laureenrebeca652@gmail.com','Aliens', 'Feminino', '878788’');
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES ('Caio Mota', '1314','983908708','470.629.558-09','caiomota@gmail.com','Beneficiencia', 'Masculino', '072348');
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES ('Mariana Sacchi', '1516','98331706','461.876.543-89','marisachi09@gmail.com','Unimed', 'Feminino', '989096');
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha) 
+VALUES ('Edmilson Matheus', '1718','98561792','491.901.328-64',edimilsonmatehsu@gmail.com','Unimed', 'Masculino’, '089999');
