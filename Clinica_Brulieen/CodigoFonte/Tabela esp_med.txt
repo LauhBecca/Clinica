@@ -1,0 +1,4 @@
+create table esp_medico(
+cod_med int REFERENCES tb_medico(cod_med),
+cod_esp int REFERENCES tb_especialidade(cod_esp)
+)
