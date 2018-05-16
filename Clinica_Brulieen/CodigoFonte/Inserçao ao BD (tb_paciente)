@@ -1,1 +1,9 @@
 
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3223-2254', 'Marcia', '984.834.875-98', '28/06/1994',);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3425-8734', 'Carlos', '274.132.805-45', '20/05/1999',);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3274-0857', 'Gabriel', '564.334.675-08','02/01/1987', );
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3463-0235', 'Antonia', '920.024.215-88', '04/04/2000', );
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3456-0842', 'Camila', '954.154.875-38', '15/10/1996',);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3245-8329', 'Lais', '654.131.825-12', '19/07/1984', );
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3386-2265', 'Natalia', '484.214.853-21', '30/03/1998',);
+
