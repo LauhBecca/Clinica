@@ -1,0 +1,7 @@
+INSERT INTO (nome,crm) Values (‘ortopedia’, ‘1234’);
+INSERT INTO (nome,crm) Values (‘cardiologista’, ‘0434’);
+INSERT INTO (nome,crm) Values (‘oculista’, ‘1754’);
+INSERT INTO (nome,crm) Values (‘pediatra’, ‘5548’);
+INSERT INTO (nome,crm) Values (‘dentista’, ‘1584’);
+INSERT INTO (nome,crm) Values (‘ginecologista’, ‘8254’);
+INSERT INTO (nome,crm) Values (‘neurologista’, ‘1824’);
