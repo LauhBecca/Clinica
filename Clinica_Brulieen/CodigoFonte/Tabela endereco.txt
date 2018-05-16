@@ -1,0 +1,12 @@
+create table tb_endereco(
+cod_end int PRIMARY KEY IDENTITY (0,1),
+rua varchar(255),
+cep varchar(8),
+bairro varchar(150),
+cidade varchar (70),
+estado varchar(2),
+numero int,
+fk_paci int REFERENCES tb_paciente (cod_pac),
+fk_medi int REFERENCES tb_medico (cod_med),
+fk_cons int REFERENCES tb_consultorio (cod_cons)
+)
