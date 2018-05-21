@@ -10,4 +10,3 @@ sexo varchar (15) not null,
 senha char(6) not null,
 cod_end int REFERENCES tb_endereco(cod_end)
 )
-)
