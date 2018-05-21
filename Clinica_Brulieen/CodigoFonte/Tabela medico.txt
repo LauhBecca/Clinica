@@ -2,10 +2,12 @@ create table tb_medico (
 cod_med int PRIMARY KEY IDENTITY (0,1),
 nome varchar(255) not null,
 crm int not null,
-telefone int,
-cpf varchar(11) not null,
+telefone varchar(15),
+cpf varchar(20) not null,
 email varchar(255),
 plano_de_saude varchar (255),
-sexo varchar (10) not null, 
-senha char(6) not null 
+sexo varchar (15) not null, 
+senha char(6) not null,
+cod_end int REFERENCES tb_endereco(cod_end)
+)
 )
