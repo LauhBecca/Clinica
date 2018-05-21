@@ -1,0 +1,5 @@
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('12.06.2018', '18:30', 'Possui alergia', 'Exame', 4,0)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('12.06.2018', '17:00', '--', 'Pediatra', 3, 1)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('12.06.2018', '09:00', '--', 'Ortopedia', 2, 2)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('13.06.2018', '07:30', '--', 'Clínico Geral',3, 3)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('14.07.2018', '07:40', 'Alergia à dipirona', 'Clinico Geral', 4,5)
