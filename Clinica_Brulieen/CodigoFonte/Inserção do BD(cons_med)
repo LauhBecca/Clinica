@@ -1,0 +1,5 @@
+INSERT INTO cons_med (cod_med, cod_cons) values (0,0)
+INSERT INTO cons_med (cod_med, cod_cons) values (0,1)
+INSERT INTO cons_med (cod_med, cod_cons) values(1, 0)
+INSERT INTO cons_med (cod_med, cod_cons) values(1,1)
+INSERT INTO cons_med (cod_med, cod_cons) values (2,2)
