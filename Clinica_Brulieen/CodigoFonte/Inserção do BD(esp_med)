@@ -1,0 +1,14 @@
+INSERT INTO esp_medico (cod_med, cod_esp) values (0,0);
+INSERT INTO esp_medico (cod_med, cod_esp) values (0,1);
+INSERT INTO esp_medico (cod_med, cod_esp) values (0,2);
+INSERT INTO esp_medico (cod_med, cod_esp) values (1,3);
+INSERT INTO esp_medico (cod_med, cod_esp) values (1,4);
+INSERT INTO esp_medico (cod_med, cod_esp) values (2,5);
+INSERT INTO esp_medico (cod_med, cod_esp) values (2,6);
+INSERT INTO esp_medico (cod_med, cod_esp) values (2,0);
+INSERT INTO esp_medico (cod_med, cod_esp) values (3,0);
+INSERT INTO esp_medico (cod_med, cod_esp) values (3,5)
+INSERT INTO esp_medico (cod_med, cod_esp) values (4,3);
+INSERT INTO esp_medico (cod_med, cod_esp) values (5,3);
+INSERT INTO esp_medico (cod_med, cod_esp) values (6,6);
+INSERT INTO esp_medico (cod_med, cod_esp) values (6,3);
