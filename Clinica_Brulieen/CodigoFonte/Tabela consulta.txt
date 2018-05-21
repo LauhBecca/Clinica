@@ -1,9 +1,10 @@
+
 create table tb_consulta(
 cod_consu int PRIMARY KEY IDENTITY (0,1),
 data date, 
-hora int, 
+hora varchar(6), 
 relatorio varchar(255),
 tipo varchar(255),
-fk_paci int REFERENCES tb_paciente (cod_pac),
-fk_medi int REFERENCES tb_medico (cod_med)
+cod_pac int REFERENCES tb_paciente (cod_pac),
+cod_med int REFERENCES tb_medico (cod_med)
 )
