@@ -1,0 +1,181 @@
+create table tb_endereco(
+cod_end int PRIMARY KEY IDENTITY (0,1),
+rua varchar(255),
+cep varchar(10),
+bairro varchar(150),
+cidade varchar (70),
+estado varchar(6),
+numero int
+)
+
+create table tb_medico (
+cod_med int PRIMARY KEY IDENTITY (0,1),
+nome varchar(255) not null,
+crm int not null,
+telefone varchar(15),
+cpf varchar(20) not null,
+email varchar(255),
+plano_de_saude varchar (255),
+sexo varchar (15) not null, 
+senha char(6) not null,
+cod_end int REFERENCES tb_endereco(cod_end)
+)
+
+create table tb_especialidade(
+cod_esp int PRIMARY KEY IDENTITY (0,1),
+nome varchar(255) not null,
+crm int not null
+)
+
+
+
+create table esp_medico(
+cod_med int REFERENCES tb_medico(cod_med),
+cod_esp int REFERENCES tb_especialidade(cod_esp)
+)
+
+
+
+create table tb_consultorio(
+cod_cons int PRIMARY KEY IDENTITY (0,1),
+nome varchar(255),
+cod_end int REFERENCES tb_endereco(cod_end)
+)
+
+
+
+
+create table tb_paciente(
+cod_pac int PRIMARY KEY IDENTITY(0,1),
+nome varchar(255) not null,
+telefone int not null,
+cpf varchar(20) not null,
+nascimento varchar (25) not null,
+email varchar(255),
+sexo varchar (15),
+plano_de_saude varchar (255),
+senha char(6) not null,
+cod_cons int REFERENCES tb_consultorio (cod_cons),
+cod_end int REFERENCES tb_endereco (cod_end)
+)
+
+create table tb_consulta(
+cod_consu int PRIMARY KEY IDENTITY (0,1),
+data date, 
+hora varchar(6), 
+relatorio varchar(255),
+tipo varchar(255),
+cod_pac int REFERENCES tb_paciente (cod_pac),
+cod_med int REFERENCES tb_medico (cod_med)
+)
+
+
+
+
+create table cons_med(
+cod_med int REFERENCES tb_medico (cod_med),
+cod_cons int REFERENCES tb_consultorio(cod_cons)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*em relacao a tabela endereco*/
+
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Conceicao', '13013-101', 'Centro', 'Campinas', 'SP', 286);
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Alferes Domingos', '13015-031', 'Centro', 'Campinas', 'SP', 500);
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Barata Ribeiro','13015-097', 'Centro','Campinas', 'SP', 59);
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Clelia de Morais Antonio','13058-315', 'Jardim Santa Clara',  'Campinas', 'SP',59);
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Armando Amaral','13099-104', 'Carlos Gomes','Campinas', 'SP', 100);
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Paula Bueno','13015-097', 'Taquaral','Campinas', 'SP', 596);
+INSERT INTO tb_endereco (rua, cep, bairro, cidade, estado, numero) VALUES ('rua Sílvio Rizzardo','13060-854', 'Jardim Campos Elíseos','Campinas', 'SP',1200);
+
+/*em relacao a tabela medico*/
+
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Livia Mariana Luz', 1234,'98331702','461.851.028-54','luzz.liviamariana@gmail.com','Unimed', 'Feminino', '070708', 0);
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Matheus Leite Tavares', 5678,'981629702','432.493.668-46','mleitetavares@gmail.com','Unimed', 'Masculino', '123456', 1);
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Bruna Dias Araujo', 9101,'984559870','456.879.900-78','bruninhaaraujo@gmail.com','Bradesco', 'Feminino', '989898', 2);
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Laureen Rebecca',1112, '98334455', '879.098.124-80','laureenrebeca652@gmail.com','Aliens', 'Feminino', '878788', 3);
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Caio Mota', 1314,'983908708','470.629.558-09','caiomota@gmail.com','Beneficiencia', 'Masculino', '072348', 4);
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Mariana Sacchi', 1516,'98331706','461.876.543-89','marisachi09@gmail.com','Unimed', 'Feminino', '989096', 5);
+INSERT INTO tb_medico (nome, crm, telefone, cpf, email, plano_de_saude, sexo, senha, cod_end) VALUES ('Edmilson Matheus', 1718, '98561792','491.901.328-64','edimilsonmatehsu@gmail.com', 'Unimed', 'Masculino', '098765', 6);
+
+
+/*em relacao a tabela especialidade*/
+
+INSERT INTO tb_especialidade (nome, crm) values ('ortopedia', 1234);
+INSERT INTO tb_especialidade (nome, crm) values ('cardiologista', 0434);
+INSERT INTO tb_especialidade (nome, crm) values ('oculista', 1754);
+INSERT INTO tb_especialidade (nome, crm) values ('pediatra', 5548);
+INSERT INTO tb_especialidade (nome, crm) values ('dentista', 1584);
+INSERT INTO tb_especialidade (nome, crm) values ('ginecologista', 8254);
+INSERT INTO tb_especialidade (nome, crm) values ('neurologista', 1824);
+
+
+/*em relacao a tabela especialidade e medico*/
+
+
+INSERT INTO esp_medico (cod_med, cod_esp) values (0,0);
+INSERT INTO esp_medico (cod_med, cod_esp) values (0,1);
+INSERT INTO esp_medico (cod_med, cod_esp) values (0,2);
+INSERT INTO esp_medico (cod_med, cod_esp) values (1,3);
+INSERT INTO esp_medico (cod_med, cod_esp) values (1,4);
+INSERT INTO esp_medico (cod_med, cod_esp) values (2,5);
+INSERT INTO esp_medico (cod_med, cod_esp) values (2,6);
+INSERT INTO esp_medico (cod_med, cod_esp) values (2,0);
+INSERT INTO esp_medico (cod_med, cod_esp) values (3,0);
+INSERT INTO esp_medico (cod_med, cod_esp) values (3,5)
+INSERT INTO esp_medico (cod_med, cod_esp) values (4,3);
+INSERT INTO esp_medico (cod_med, cod_esp) values (5,3);
+INSERT INTO esp_medico (cod_med, cod_esp) values (6,6);
+INSERT INTO esp_medico (cod_med, cod_esp) values (6,3);
+
+/*em relacao a tabela consultorio*/
+
+INSERT INTO tb_consultorio (nome, cod_end) values ('Bem para todos',0)
+INSERT INTO tb_consultorio (nome, cod_end) values ('Consulta todos',1)
+INSERT INTO tb_consultorio (nome, cod_end) values ('Cidade', 3)
+
+/*em relacao a tabela paciente*/
+
+
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3223-2254, 'Marcia', '984.834.875-98', '28/06/1994', 'marcinha3698@gmail.com', '123456', 'feminino', 'unimed', 6,0);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3425-8734, 'Carlos', '274.132.805-45', '20/05/1999', 'carlosdurant224@hotmail.com', 'durat9', 'masculino', 'unimed', 5,1);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3274-0857, 'Gabriel', '564.334.675-08','02/01/1987', 'bielalarico476@yahoo.com.br', '2691ga', 'masculino', 'bradesco', 4,2);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3463-0235, 'Antonia', '920.024.215-88', '04/04/2000', 'antynoi@gmail.com', 'antyl', 'feminino', 'bradesco', 3,2);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3456-0842, 'Camila', '954.154.875-38', '15/10/1996', 'camisloa@gmail.com', 'chocho', 'feminino', 'unimed', 2,1);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3245-8329, 'Lorenia', '654.131.825-12', '19/07/1984', 'lolamont1456@gmail.com', 'lorian', 'feminino', 'uniodonto', 1,0);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3386-2265, 'Natalia', '484.214.853-21', '30/03/1998', 'natymania@gmail.com', '125874', 'feminino', 'unimed', 0,0);
+
+/*em relacao a tabela consulta*/
+
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('12.06.2018', '18:30', 'Possui alergia', 'Exame', 4,0)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('12.06.2018', '17:00', '--', 'Pediatra', 3, 1)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('12.06.2018', '09:00', '--', 'Ortopedia', 2, 2)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('13.06.2018', '07:30', '--', 'Clínico Geral',3, 3)
+INSERT INTO tb_consulta (data, hora, relatorio, tipo, cod_pac, cod_medi ) values ('14.07.2018', '07:40', 'Alergia à dipirona', 'Clinico Geral', 4,5)
+
+
+
+/*em relacao a tabela consulta e medico*/
+
+
+INSERT INTO cons_med (cod_med, cod_cons) values (0,0)
+INSERT INTO cons_med (cod_med, cod_cons) values (0,1)
+INSERT INTO cons_med (cod_med, cod_cons) values(1, 0)
+INSERT INTO cons_med (cod_med, cod_cons) values(1,1)
+INSERT INTO cons_med (cod_med, cod_cons) values (2,2)
+
+
+
+
