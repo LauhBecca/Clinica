@@ -1,4 +1,4 @@
 create table cons_med(
-fk_medi int REFERENCES tb_medico (cod_med),
-fk_cons int REFERENCES tb_consultorio(cod_cons)
+cod_med int REFERENCES tb_medico (cod_med),
+cod_cons int REFERENCES tb_consultorio(cod_cons)
 )
