@@ -1,9 +1,8 @@
-
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3223-2254', 'Marcia', '984.834.875-98', '28/06/1994',);
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3425-8734', 'Carlos', '274.132.805-45', '20/05/1999',);
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3274-0857', 'Gabriel', '564.334.675-08','02/01/1987', );
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3463-0235', 'Antonia', '920.024.215-88', '04/04/2000', );
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3456-0842', 'Camila', '954.154.875-38', '15/10/1996',);
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3245-8329', 'Lais', '654.131.825-12', '19/07/1984', );
-INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_cons) VALUES ('3386-2265', 'Natalia', '484.214.853-21', '30/03/1998',);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3223-2254, 'Marcia', '984.834.875-98', '28/06/1994', 'marcinha3698@gmail.com', '123456', 'feminino', 'unimed', 6,0);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3425-8734, 'Carlos', '274.132.805-45', '20/05/1999', 'carlosdurant224@hotmail.com', 'durat9', 'masculino', 'unimed', 5,1);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3274-0857, 'Gabriel', '564.334.675-08','02/01/1987', 'bielalarico476@yahoo.com.br', '2691ga', 'masculino', 'bradesco', 4,2);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3463-0235, 'Antonia', '920.024.215-88', '04/04/2000', 'antynoi@gmail.com', 'antyl', 'feminino', 'bradesco', 3,2);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3456-0842, 'Camila', '954.154.875-38', '15/10/1996', 'camisloa@gmail.com', 'chocho', 'feminino', 'unimed', 2,1);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3245-8329, 'Lorenia', '654.131.825-12', '19/07/1984', 'lolamont1456@gmail.com', 'lorian', 'feminino', 'uniodonto', 1,0);
+INSERT INTO tb_paciente (telefone, nome, cpf, nascimento, email, senha, sexo, plano_de_saude, cod_end, cod_cons) VALUES (3386-2265, 'Natalia', '484.214.853-21', '30/03/1998', 'natymania@gmail.com', '125874', 'feminino', 'unimed', 0,0);
 
